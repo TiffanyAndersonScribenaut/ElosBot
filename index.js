@@ -5,7 +5,7 @@ const Eris = require('eris');
 
 // The Client
 
-var bot = new Eris.CommandClient("NTQyMTgzNjc1Njk4MDg1OTA5.DzqTyQ.xXJLne0uFcqfH75RPNH1S-YaSR0",  {}, {
+var bot = new Eris.CommandClient('process.env.TOKEN',  {}, {
     description: "An Discord Bot",
     owner: "TimmyTimothyAnderson#3719",
     prefix: "e!"
