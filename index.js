@@ -15,8 +15,6 @@ bot.on("ready", () => { // When the bot is ready
     console.log("Ready!"); // Log "Ready!"
 });
 
-bot.registerCommandAlias("halp", "help"); // Alias !halp to !help
-
 bot.registerCommand("ping", "Pong!", { // Make a ping command
 // Responds with "Pong!" when someone says "!ping"
     description: "Pong!",
@@ -27,12 +25,6 @@ bot.registerCommand("bored", "Try playing a game!", { // Make a ping command
 // Responds with "Pong!" when someone says "!ping"
     description: "bored!",
     fullDescription: "This command could be used to check if the bot is up. Or entertainment when you're bored."
-});
-
-bot.registerCommand("pong", ["Pang!", "Peng!", "Ping!", "Pung!"], { // Make a pong command
-// Responds with a random version of "Ping!" when someone says "!pong"
-    description: "Ping!",
-    fullDescription: "This command could also be used to check if the bot is up. Or entertainment when you're bored."
 });
 
 var echoCommand = bot.registerCommand("echo", (msg, args) => { // Make an echo command
