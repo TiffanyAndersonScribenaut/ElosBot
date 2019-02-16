@@ -16,19 +16,19 @@ bot.on("ready", () => { // When the bot is ready
 });
 
 bot.registerCommand("ping", "Pong!", { // Make a ping command
-// Responds with "Pong!" when someone says "!ping"
+// Responds with "Pong!" when someone says "e!ping"
     description: "Pong!",
     fullDescription: "This command could be used to check if the bot is up. Or entertainment when you're bored."
 });
 
-bot.registerCommand("bored", "Try playing a game!", { // Make a ping command
-// Responds with "Pong!" when someone says "!ping"
+bot.registerCommand("bored", "Try playing a game!", { // Make a bored command
+// Responds with "Try playing a game" when someone says "e!bored"
     description: "bored!",
-    fullDescription: "This command could be used to check if the bot is up. Or entertainment when you're bored."
+    fullDescription: "This command is for when you are bored"
 });
 
 var echoCommand = bot.registerCommand("echo", (msg, args) => { // Make an echo command
-    if(args.length === 0) { // If the user just typed "!echo", say "Invalid input"
+    if(args.length === 0) { // If the user just typed "e!echo", say "Invalid input"
         return "Invalid input";
     }
     var text = args.join(" "); // Make a string of the text after the command label
@@ -40,7 +40,7 @@ var echoCommand = bot.registerCommand("echo", (msg, args) => { // Make an echo c
 });
 
 echoCommand.registerSubcommand("reverse", (msg, args) => { // Make a reverse subcommand under echo
-    if(args.length === 0) { // If the user just typed "!echo reverse", say "Invalid input"
+    if(args.length === 0) { // If the user just typed "e!echo reverse", say "Invalid input"
         return "Invalid input";
     }
     var text = args.join(" "); // Make a string of the text after the command label
@@ -52,6 +52,6 @@ echoCommand.registerSubcommand("reverse", (msg, args) => { // Make a reverse sub
     usage: "<text>"
 });
 
-echoCommand.registerSubcommandAlias("backwards", "reverse"); // Alias "!echo backwards" to "!echo reverse"
+echoCommand.registerSubcommandAlias("backwards", "reverse"); // Alias "e!echo backwards" to "e!echo reverse"
 
 bot.connect();
