@@ -8,7 +8,7 @@ const Eris = require('eris');
 var bot = new Eris.CommandClient(process.env.TOKEN,  {}, {
     description: "An Discord Bot",
     owner: "TimmyTimothyAnderson#3719",
-    prefix: "e!"
+    prefix: ">"
 });
 
 bot.on("ready", () => { // When the bot is ready
